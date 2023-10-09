@@ -1,0 +1,597 @@
+Write a program to implement the prime number using user input.
+Ans—----
+
+import 'dart:io';
+void main() {
+print("Enter an integer: ");
+int a = int.parse(stdin.readLineSync()!);
+print('You entered: $a');
+int i, count;
+for(i = 2; i <= a; i++) {
+count = 0;
+for(int j = 2; j <= i / 2; j++) {
+if (i % j == 0) {
+count++;
+break;
+}
+}
+if (count == 0) {
+print(i);
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+Que Write a program to implement to find the Simple interset. (formula==a*b*c)/100..
+Ans—--
+
+import 'dart:io';
+void main() {
+print("Enter an integer for 'a': ");
+int a = int.parse(stdin.readLineSync()!);
+print("Enter an integer for 'b': ");
+int b = int.parse(stdin.readLineSync()!);
+print("Enter an integer for 'c': ");
+int c = int.parse(stdin.readLineSync()!);
+int d = (a * b * c) ~/ 100; // Use ~/ for integer division
+print("Result: $d");
+}
+
+
+
+
+
+
+
+
+
+
+Que …. Write a program to implement the square of the number using user input…
+Ans……
+
+import 'dart:io';
+void main() {
+print("Enter an integer for 'a': ");
+int a = int.parse(stdin.readLineSync()!);
+int b=a*a;
+print("Result: $b");
+}
+
+
+
+
+
+
+Que…. Write a dart program to convert string into int..
+Ans…
+
+void main() {
+String inputString = "42"; // Replace this with your input string
+int intValue = int.parse(inputString);
+print("Converted integer: $intValue");
+}
+
+
+
+
+
+
+Que .. Write a dart program to implement that enter number is even or odd.
+Ans….
+
+import 'dart:io';
+void main() {
+print("Enter an integer for 'a': ");
+int a = int.parse(stdin.readLineSync()!);
+if (a % 2 == 0) {
+print('$a is a even number');
+}
+else {
+print('$a is a odd number');
+}
+}
+
+Write a program to implement that if else statement.
+Ans.. in the above code is the same answer that is even or odd.
+
+
+
+
+
+
+
+
+
+Que..Write a program to take user input to name and age and print them ..
+Ans…
+
+import 'dart:io';
+void main() {
+print("Enter your name: ");
+String name = stdin.readLineSync()!;
+print("Enter your age: ");
+String age = stdin.readLineSync()!;
+print("Name: $name");
+print("Age: $age");
+}
+
+
+
+
+
+
+
+
+
+Que….Write a dart program to implement that add,sub,div,mul and so on to take user input..
+Ans..
+
+import 'dart:io';
+void main() {
+print("Enter your age 1: ");
+int a = int.parse(stdin.readLineSync()!);
+print("Enter your age 2: ");
+int b = int.parse(stdin.readLineSync()!);
+int sum = a + b;
+print("Sum of ages: $sum");
+}
+
+
+
+
+
+
+Que … Write a program to implement that enter number is prime or not.
+Ans…
+
+import 'dart:io';
+void main() {
+print("Enter a number: ");
+int number = int.parse(stdin.readLineSync()!);
+bool isPrime = true;
+if (number <= 1) {
+isPrime = false;
+} else {
+for (int i = 2; i <= number / 2; i++) {
+if (number % i == 0) {
+isPrime = false;
+break;
+}
+}
+}
+if (isPrime) {
+print("$number is a prime number.");
+} else {
+print("$number is not a prime number.");
+}
+}
+
+
+
+
+
+Que.. Write a program to Create a class and entered the name,age and class.
+Ans…
+
+class Student {
+var stdname;
+var stdroll;
+var stdage;
+showStdinfo() {
+print("The name of the student is :=${stdname}");
+}
+}
+void main()
+{
+var obj=new Student();
+obj.stdname="Sonu";
+obj.showStdinfo();
+}
+
+
+
+
+
+
+
+
+
+
+//counter
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.pinkAccent,
+        title: Text(
+            widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+              style: TextStyle(
+                fontSize: 20.0,
+              ) ,
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+//image
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home:MyApp(),
+  ));
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key?key}) :super (key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'App',
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.blueAccent[900],
+      ),
+      body: Center(
+        child: Image.asset('assets/sky.png'),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//profile
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  home: ProfileId(),
+));
+
+class ProfileId extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
+        title: Text('My Profile'),
+        centerTitle: true,
+        elevation: 0.0,
+      ),
+      body: const Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          children: <Widget>[ 
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/rx100.jpg'),
+              radius: 90.0,
+            ),
+            Divider(
+              height: 70.0,
+              color: Colors.grey,
+            ),
+            Text(
+              'Name',
+              style: TextStyle(
+                color: Colors.black,
+                letterSpacing: 2.0,
+              ),
+            ),
+            Text(
+              'Ashish Yadav',
+              style: TextStyle(
+                color: Colors.deepPurple,
+                letterSpacing: 2.0,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Row(
+              children: <Widget>[
+                Icon(Icons.email,
+                  color: Colors.deepPurple,
+                ),
+                SizedBox(width: 5.0),
+                Text(
+                  'ashishyadav@gmail.com',
+                  style: TextStyle(
+                    color:Colors.black,
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Calculator
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: CalculatorApp(),
+  ));
+}
+
+class CalculatorApp extends StatefulWidget {
+  @override
+  _CalculatorAppState createState() => _CalculatorAppState();
+}
+
+class _CalculatorAppState extends State<CalculatorApp> {
+  TextEditingController controller1 = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
+
+  int? num1 = 0;
+  int? num2 = 0;
+  int? result = 0;
+
+  void add() {
+    setState(() {
+      if (controller1.text.isNotEmpty && controller2.text.isNotEmpty) {
+        num1 = int.tryParse(controller1.text);
+        num2 = int.tryParse(controller2.text);
+        if (num1 != null && num2 != null) {
+          result = num1! + num2!;
+        } else {
+          result = null; // Handle invalid input gracefully
+        }
+      }
+    });
+  }
+  void sub() {
+    setState(() {
+      if (controller1.text.isNotEmpty && controller2.text.isNotEmpty) {
+        num1 = int.tryParse(controller1.text);
+        num2 = int.tryParse(controller2.text);
+        if (num1 != null && num2 != null) {
+          result = num1! - num2!;
+        } else {
+          result = null; // Handle invalid input gracefully
+        }
+      }
+    });
+  }
+
+  void mul() {
+    setState(() {
+      if (controller1.text.isNotEmpty && controller2.text.isNotEmpty) {
+        num1 = int.tryParse(controller1.text);
+        num2 = int.tryParse(controller2.text);
+        if (num1 != null && num2 != null) {
+          result = num1! * num2!;
+        } else {
+          result = null; // Handle invalid input gracefully
+        }
+      }
+    });
+  }
+
+  void div() {
+    setState(() {
+      if (controller1.text.isNotEmpty && controller2.text.isNotEmpty) {
+        num1 = int.tryParse(controller1.text);
+        num2 = int.tryParse(controller2.text);
+        if (num1 != null && num2 != null) {
+          if (num2 != 0) {
+            result = num1! ~/ num2!;
+          } else {
+            result = null; // Handle division by zero gracefully
+          }
+        }
+      }
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Simple Calculator'),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+      ),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 15,
+          ),
+          Text(
+            result != null ? 'Result is: $result' : 'Invalid Input',
+            style: TextStyle(
+              fontSize: 20,
+              color: result != null ? Colors.redAccent : Colors.grey,
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          TextField(
+            controller: controller1,
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              labelText: "Enter number",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          TextField(
+            controller: controller2,
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              labelText: "Enter number",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  add();
+                  controller1.clear();
+                  controller2.clear();
+                },
+                child: Text('ADD'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  sub();
+                  controller1.clear();
+                  controller2.clear();
+                },
+                child: Text('SUB'),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  mul();
+                  controller1.clear();
+                  controller2.clear();
+                },
+                child: Text('MUL'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  div();
+                  controller1.clear();
+                  controller2.clear();
+                },
+                child: Text('DIV'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
